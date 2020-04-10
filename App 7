@@ -1,0 +1,23 @@
+  var stroke_count = 0; // stroke count is set to 0
+        var diabetes_count = 0; // diabetes count is set to 0
+	var strokePercent = 0;  // stroke percent is set to 0
+	var diabetesPercent = 0; // diabetes percent is set to 0 
+
+
+	
+        function strokeAdd(){ // this is my function for stroke
+            stroke_count = stroke_count + 1; // this is my stroke count
+
+        }
+
+        function diabetesAdd(){ // this is my function for diabetes
+            diabetes_count = diabetes_count + 1; // this is my diabetes count
+        }
+
+	
+	function resultPercentage() { // this my function for result percentage
+		strokePercent = (stroke_count/6)*100; // this is my stroke percent
+		diabetesPercent = (diabetes_count/6)*100; // this is my diabetes percent
+		var resultText = document.getElementById("seven");
+		resultText.innerHTML = "Probability you may have a stroke =" + strokePercent + "%" + "<br> Probability you may have diabetes=" + diabetesPercent + "%"; 
+	}
