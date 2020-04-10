@@ -34,13 +34,23 @@ Everything was working and displaying perfectly fine until I made comments. My c
 
 
 <script>
-        var stroke_count = 0; // stroke count is set to 0
-        var diabetes_count = 0; // diabetes count is set to 0
-	var strokePercent = 0;  // stroke percent is set to 0
-	var diabetesPercent = 0; // diabetes percent is set to 0 
+        var covid_count = 0; // the total covid count is set to 0
+		var covidlight_count = 0; // the count for symptoms that have a light effect in covid
+		var covidmild_count = 0; // the count for symptoms that have a mild effect in covid
+		var covidhigh_count = 0; // the count for symptoms that have a high effect in covid
+        var cold_count = 0; // total cold count is set to 0
+		var coldlight_count = 0; // the count for symptoms that have a light effect in a cold
+		var covidmild_count = 0; // the count for symptoms that have a mild effect in a cold
+		var covidhigh_count = 0; // the count for symptoms that have a high effect in a cold
+	var flu_count = 0;  // total flu count is set to 0
+		var flulight_count = 0; // the count for symptoms that have a light effect in a flu
+		var flumild_count = 0; // the count for symptoms that have a mild effect in a flu
+		var fluhigh_count = 0; // the count for symptoms that have a high effect in a flu
+	var allergy_count = 0; // total allergy count is set to 0
+		var allergylight_count = 0; // the count for symptoms that have a light effect in allergies
+		var allergymild_count = 0; // the count for symptoms tha thave a mild effect in allergies
+		var allergyhigh_count = 0; // the count of symptoms that have a high effect in allergies
 
-
-	
         function strokeAdd(){ // this is my function for stroke
             stroke_count = stroke_count + 1; // this is my stroke count
 
