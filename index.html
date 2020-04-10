@@ -1,4 +1,40 @@
-  var stroke_count = 0; // stroke count is set to 0
+<!DOCTYPE html> 
+<html> 
+<!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
+ 
+THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
+ 
+ 
+Authors in chronological order of contribution:
+Kiona Cole						
+Timothy Riedel
+ 
+Further Information:
+http://diystream.cns.utexas.edu/
+
+Research Educator:
+Timothy Riedel
+triedel@utexas.edu
+ 
+Brief Description of Goal of Code:
+The goal of my code is to create my own diagnostic survey about diabetes and stroke and to find out which one the individual has.
+ 
+Known Issues:
+Everything was working and displaying perfectly fine until I made comments. My calculations didn't add up to 100% and the picture didn't upload.
+-->
+
+	
+   <head> 
+      <title>Hello World</title> 
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="w3-colors-flat.css">
+   </head> 
+
+
+<script>
+        var stroke_count = 0; // stroke count is set to 0
         var diabetes_count = 0; // diabetes count is set to 0
 	var strokePercent = 0;  // stroke percent is set to 0
 	var diabetesPercent = 0; // diabetes percent is set to 0 
@@ -21,3 +57,152 @@
 		var resultText = document.getElementById("seven");
 		resultText.innerHTML = "Probability you may have a stroke =" + strokePercent + "%" + "<br> Probability you may have diabetes=" + diabetesPercent + "%"; 
 	}
+
+</script>
+
+
+
+<style>	
+.body {	
+     margin: 0em; 
+}
+	
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<body>
+<div id="header" class="w3-container w3-purple">		<!--This is my header-->      					
+	<h1>Diabetes or stroke?</h1>     			<!--What I am surveying-->          					
+</div>
+	
+<div id="content" class="w3-container">				<!--Where my content is located-->
+	<p>Are you feeling like you might have diabetes but now you're beginning to wonder if a stroke is to blame? Answer a few short questions to find out!</p>
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>  		
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p> 	
+
+
+
+<div class="page" id="one">				<!--this is my first page-->							
+	<div id="header" class="w3-container w3-purple">				
+		<h1>Question 1</h1>						
+	</div>
+	
+    	<div id="content" class="w3-container">		<!--Where my content is located-->	
+        	<p>Do you have increased thirst?</p>    <!--first question-->	 				
+		<a href="#two"  onclick="diabetesAdd();" class="w3-btn w3-pink"> Yes</a> 	<!--first option-->	
+         	<a href="#two"  onclick="strokeAdd();" class="w3-btn w3-pink">No</a>       	<!--second option-->
+    	</div>
+
+</div> <!--separates page-->
+
+<div class="page" id="two">				<!--this is my second page-->								
+	<div class="w3-container w3-purple">						
+		<h1>Question 2</h1>							
+	</div>
+	
+	<div id="content" class="w3-container">		<!--Where my content is located-->	
+		<p>Do you have sudden numbness?</p>	<!--second question-->	 						
+		<a href="#three"  onclick="stroke();" class="w3-btn w3-pink"> Yes</a>	<!--first option-->
+         	<a href="#three"  onclick="diabetes Add();" class="w3-btn w3-pink">No</a> <!--first option-->
+	</div>
+
+</div>	<!--separates page-->
+
+
+<div class="page" id="three">				<!--this is my third page-->							
+	<div class="w3-container w3-purple">						
+		<h1>Question 3</h1>							
+	</div>
+	
+	<div id="content" class="w3-container">		<!--Where my content is located-->
+		<p>Do you have extreme hunger?</p>	<!--third question-->			
+		<a href="#four"  onclick="diabetesAdd();" class="w3-btn w3-pink"> Yes</a>	<!--first option-->
+         	<a href="#four"  onclick="high cholesterolAdd();" class="w3-btn w3-pink">No</a> <!--second option-->
+	</div>
+
+</div>	<!--separates page-->
+
+
+	
+<div class="page" id="four">				<!--this is my fourth page-->					
+	<div class="w3-container w3-purple">					
+		<h1>Question 4</h1>							
+	</div>		
+	
+	<div id="content" class="w3-container">		<!--Where my content is located-->
+		<p>Do you have a loss of movement in your face?</p>	<!--fourth question-->				
+		<a href="#five" onclick="strokeAdd();" class="w3-btn w3-pink"> Yes</a> <!--first option-->
+         	<a href="#five" onclick="diabetesAdd();" class="w3-btn w3-pink">No</a> <!--second option-->
+	</div>
+
+</div> <!--separates page-->
+	
+
+
+
+<div class="page" id="five">			<!--this is my fifth page-->					
+	<div class="w3-container w3-purple">						
+		<h1>Question 5</h1>							
+	</div>
+	
+	<div id="content" class="w3-container"> <!--Where my content is located-->
+		<p>Do you have unexplained weight loss?</p> <!--fifth question-->					
+		<a href="#six"  onclick="diabetesAdd();" class="w3-btn w3-pink"> Yes</a> <!--first option-->	
+         	<a href="#six"  onclick="strokeAdd();" class="w3-btn w3-pink">No</a> <!--second option-->
+	</div>
+		
+</div>	<!--separates page-->
+
+
+
+<div class="page" id="six">			<!--this is my sixth page-->					
+	<div class="w3-container w3-purple">					
+		<h1>Question 6</h1>							
+	</div>
+	
+	<div id="content" class="w3-container"> <!--Where my content is located-->
+		<p>Do you have sudden vision changes?</p> <!--sixth question-->						
+		<a href="#seven" onclick="strokeAdd();" class="w3-btn w3-pink">Yes</a>	<!--first option-->
+         	<a href="#seven" onclick="diabetesAdd();" class="w3-btn w3-pink">No</a> <!--second option-->
+	</div>
+img src="" alt="Girl in a jacket" style="width:500px;height:600px;">				
+</div> <!--separates page-->
+
+	
+<div class="page" id="seven">			<!--this is my seventh page-->							
+	<div class="w3-container w3-purple">						
+		<h1>RESULTS</h1>							
+	</div>
+	
+	<div id="content" class="w3-container">	<!--where my content is located-->				
+		<p>Here are your results!</p>	<!--displays results-->						
+		<a onclick="resultPercentage();" class="w3-btn w3-pink">Click here!</a> 
+	</div>
+</div>
+	
+
+	
+<footer class="w3-bottom w3-container w3-purple">     				
+	<p>DIY!</p>									
+</footer>					<!--bottom/ending-->
+
+</body>  									
+</html>  
