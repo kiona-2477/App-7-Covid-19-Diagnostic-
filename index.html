@@ -52,21 +52,21 @@ Everything was working and displaying perfectly fine until I made comments. My c
 		var allergyhigh_count = 0; // the count of symptoms that have a high effect in allergies
 
         function covidAdd(){ // this is a function that will add up the responses in the covid category
-            covid_count = covid_count + 1; // this is my stroke count
+            covid_count = covid_count + 1; // this is my covid count
 
         }
 
         function coldAdd(){ // this is a function that will add up the responses in the cold category
-            cold_count = cold_count + 1; // this is my diabetes count
+            cold_count = cold_count + 1; // this is my cold count
         }
 	
 	function fluAdd(){ // this is a function that will add up the responses in the flu category
-            flu_count = flu_count + 1; // this is my diabetes count
+            flu_count = flu_count + 1; // this is my flu count
 		
 	}
 		
 	function allergyAdd(){ // this is a function that will add up the responses in the allergy category
-            allergy_count = allergy_count + 1; // this is my diabetes count
+            allergy_count = allergy_count + 1; // this is my allergy count
 	
 	}
 	
@@ -105,11 +105,11 @@ Everything was working and displaying perfectly fine until I made comments. My c
 
 <body>
 <div id="header" class="w3-container w3-purple">		<!--This is my header-->      					
-	<h1>Diabetes or stroke?</h1>     			<!--What I am surveying-->          					
+	<h1>Flu or Coronavirus?</h1>     			<!--What I am surveying-->          					
 </div>
 	
 <div id="content" class="w3-container">				<!--Where my content is located-->
-	<p>Are you feeling like you might have diabetes but now you're beginning to wonder if a stroke is to blame? Answer a few short questions to find out!</p>
+	<p>Are you feeling ill, but are not sure what your symptoms are the result of? Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>  		
 	
@@ -125,9 +125,11 @@ Everything was working and displaying perfectly fine until I made comments. My c
 	</div>
 	
     	<div id="content" class="w3-container">		<!--Where my content is located-->	
-        	<p>Do you have increased thirst?</p>    <!--first question-->	 				
-		<a href="#two"  onclick="diabetesAdd();" class="w3-btn w3-pink"> Yes</a> 	<!--first option-->	
-         	<a href="#two"  onclick="strokeAdd();" class="w3-btn w3-pink">No</a>       	<!--second option-->
+        	<p>How long have you been having symptoms?</p>    <!--first question-->	 				
+		<a href="#two"  onclick="covidAdd();" class="w3-btn w3-pink"> 7-25b days</a> 		<!--first option-->	
+         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-pink"> less than 14 days</a>	<!--second option-->
+		<a href="#two"  onclick="fluAdd();" class="w3-btn w3-pink"> 7-14 days</a> 		<!--third option-->	
+         	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-pink"> several weeks</a>       <!--fourth option-->
     	</div>
 
 </div> <!--separates page-->
@@ -138,9 +140,10 @@ Everything was working and displaying perfectly fine until I made comments. My c
 	</div>
 	
 	<div id="content" class="w3-container">		<!--Where my content is located-->	
-		<p>Do you have sudden numbness?</p>	<!--second question-->	 						
-		<a href="#three"  onclick="stroke();" class="w3-btn w3-pink"> Yes</a>	<!--first option-->
-         	<a href="#three"  onclick="diabetes Add();" class="w3-btn w3-pink">No</a> <!--first option-->
+		<p>Do you have have a cough, and if so, how often and what kind?</p>	<!--second question-->	 						
+		<a href="#three"  onclick="covidAdd(); fluAdd();" class="w3-btn w3-pink"> Common, dry cough </a>			<!--first option-->
+         	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-pink"> Common, mild cough </a> 			<!--second option-->	
+         	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-pink"> Rarely, dry cough unless it triggers asthma</a>       <!--fourth option-->
 	</div>
 
 </div>	<!--separates page-->
@@ -152,13 +155,12 @@ Everything was working and displaying perfectly fine until I made comments. My c
 	</div>
 	
 	<div id="content" class="w3-container">		<!--Where my content is located-->
-		<p>Do you have extreme hunger?</p>	<!--third question-->			
-		<a href="#four"  onclick="diabetesAdd();" class="w3-btn w3-pink"> Yes</a>	<!--first option-->
-         	<a href="#four"  onclick="high cholesterolAdd();" class="w3-btn w3-pink">No</a> <!--second option-->
+		<p>Are you experiencing shortness of breath?</p>	<!--third question-->			
+		<a href="#four"  onclick="covidAdd();" class="w3-btn w3-pink"> Sometimes </a>	<!--first option-->
+         	<a href="#four"  onclick="coldAdd(); fluAdd(); allergyAdd();" class="w3-btn w3-pink">No</a> <!--second option-->
 	</div>
 
 </div>	<!--separates page-->
-
 
 	
 <div class="page" id="four">				<!--this is my fourth page-->					
@@ -167,15 +169,13 @@ Everything was working and displaying perfectly fine until I made comments. My c
 	</div>		
 	
 	<div id="content" class="w3-container">		<!--Where my content is located-->
-		<p>Do you have a loss of movement in your face?</p>	<!--fourth question-->				
-		<a href="#five" onclick="strokeAdd();" class="w3-btn w3-pink"> Yes</a> <!--first option-->
-         	<a href="#five" onclick="diabetesAdd();" class="w3-btn w3-pink">No</a> <!--second option-->
+		<p>Are you experiencing any sneezing? </p>	<!--fourth question-->				
+		<a href="#five" onclick="covidAdd(); fluAdd();" class="w3-btn w3-pink"> No </a> <!--first option-->
+         	<a href="#five" onclick="coldAdd(); allergyAdd()" class="w3-btn w3-pink"> Yes </a> <!--second option-->
 	</div>
 
 </div> <!--separates page-->
 	
-
-
 
 <div class="page" id="five">			<!--this is my fifth page-->					
 	<div class="w3-container w3-purple">						
@@ -183,10 +183,11 @@ Everything was working and displaying perfectly fine until I made comments. My c
 	</div>
 	
 	<div id="content" class="w3-container"> <!--Where my content is located-->
-		<p>Do you have unexplained weight loss?</p> <!--fifth question-->					
-		<a href="#six"  onclick="diabetesAdd();" class="w3-btn w3-pink"> Yes</a> <!--first option-->	
-         	<a href="#six"  onclick="strokeAdd();" class="w3-btn w3-pink">No</a> <!--second option-->
-	</div>
+		<p>Do you have a runny or stuffy nose?</p> <!--fifth question-->					
+		<a href="#six"  onclick="covidAdd();" class="w3-btn w3-pink"> Rarely </a> <!--first option-->	
+         	<a href="#six"  onclick="coldAdd(); allergyAdd();" class="w3-btn w3-pink"> Yes </a> <!--second option-->
+		<a href="#six" 	onclick=="fluAdd();" class="w3-btn w3-pink"> Sometimes </a> <!--third option-->
+	</div> 
 		
 </div>	<!--separates page-->
 
@@ -214,9 +215,10 @@ img src="" alt="Girl in a jacket" style="width:500px;height:600px;">
 	</div>
 	
 	<div id="content" class="w3-container"> <!--Where my content is located-->
-		<p>Do you have unexplained weight loss?</p> <!--fifth question-->					
-		<a href="#eight"  onclick="diabetesAdd();" class="w3-btn w3-pink"> Yes</a> <!--first option-->	
-         	<a href="#eight"  onclick="strokeAdd();" class="w3-btn w3-pink">No</a> <!--second option-->
+		<p>Do you have a fever?</p> <!--fifth question-->					
+		<a href="#eight"  onclick="covidAdd(); fluAdd(); " class="w3-btn w3-pink"> Yes</a> <!--first option-->	
+         	<a href="#eight"  onclick="coldAdd();" class="w3-btn w3-pink">Yes, but for a short period of time</a> <!--second option-->
+		<a href="#eight"  onclick="allergyAdd();" class="w3-btn w3-pink"> No</a> <!--third option-->	
 	</div>
 	
 </div> <!--separates page-->
