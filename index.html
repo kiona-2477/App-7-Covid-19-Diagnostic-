@@ -35,22 +35,11 @@ Everything was working and displaying perfectly fine until I made comments. My c
 
 <script>
         var covid_count = 0; // the total covid count is set to 0
-		var covidlight_count = 0; // the count for symptoms that have a light effect in covid
-		var covidmild_count = 0; // the count for symptoms that have a mild effect in covid
-		var covidhigh_count = 0; // the count for symptoms that have a high effect in covid
         var cold_count = 0; // total cold count is set to 0
-		var coldlight_count = 0; // the count for symptoms that have a light effect in a cold
-		var covidmild_count = 0; // the count for symptoms that have a mild effect in a cold
-		var covidhigh_count = 0; // the count for symptoms that have a high effect in a cold
 	var flu_count = 0;  // total flu count is set to 0
-		var flulight_count = 0; // the count for symptoms that have a light effect in a flu
-		var flumild_count = 0; // the count for symptoms that have a mild effect in a flu
-		var fluhigh_count = 0; // the count for symptoms that have a high effect in a flu
 	var allergy_count = 0; // total allergy count is set to 0
-		var allergylight_count = 0; // the count for symptoms that have a light effect in allergies
-		var allergymild_count = 0; // the count for symptoms tha thave a mild effect in allergies
-		var allergyhigh_count = 0; // the count of symptoms that have a high effect in allergies
-
+	// these are the four variables that are similar to App 4. e
+	
         function covidAdd(){ // this is a function that will add up the responses in the covid category
             covid_count = covid_count + 1; // this is my covid count
 
@@ -68,13 +57,6 @@ Everything was working and displaying perfectly fine until I made comments. My c
 	function allergyAdd(){ // this is a function that will add up the responses in the allergy category
             allergy_count = allergy_count + 1; // this is my allergy count
 	
-	}
-	
-	function resultPercentage() { // this my function for result percentage
-		strokePercent = (stroke_count/6)*100; // this is my stroke percent
-		diabetesPercent = (diabetes_count/6)*100; // this is my diabetes percent
-		var resultText = document.getElementById("seven");
-		resultText.innerHTML = "Probability you may have a stroke =" + strokePercent + "%" + "<br> Probability you may have diabetes=" + diabetesPercent + "%"; 
 	}
 
 </script>
