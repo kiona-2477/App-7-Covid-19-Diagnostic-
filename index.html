@@ -48,7 +48,7 @@ Everything was working and displaying perfectly fine until I made comments. My c
         function coldAdd(){ // this is a function that will add up the responses in the cold category
             cold_count = cold_count + 1; // this is my cold count
         }
-	
+
 	function fluAdd(){ // this is a function that will add up the responses in the flu category
             flu_count = flu_count + 1; // this is my flu count
 		
@@ -66,6 +66,9 @@ Everything was working and displaying perfectly fine until I made comments. My c
 		allergyPercent = (allergy_count/6)*100; // this is my allergy percent
 		var resultText = document.getElementById("seven");
 		resultText.innerHTML = "Probability you may have COVID-19=" + covidPercent + "%" + "<br> Probability you may have a cold=" + coldPercent + "%"; "<br> Probability you may have a flu=" + fluPercent + "%";  "<br> Probability you may have allergies=" + allergyPercent + "%"
+		
+	}
+		
 </script>
 
 
@@ -260,7 +263,7 @@ Everything was working and displaying perfectly fine until I made comments. My c
 	</div>
 	
 	<div id="content" class="w3-container"> <!--Where my content is located-->
-		<p>Do you experiencer diarrhea?</p> <!--eleventh question-->					
+		<p>Do you experiencer diarrhea?</p> <!--eleventh question-->				
 		<a href="#results"  onclick="covidAdd();" class="w3-btn w3-pink"> Sometimes</a> <!--first option-->	
          	<a href="#results"  onclick="fluAdd();" class="w3-btn w3-pink">Sometimes for children</a> <!--second option-->
 		<a href="#results"  onclick="coldAdd(); allergyAdd();" class="w3-btn w3-pink"> No</a> <!--third option-->
