@@ -60,10 +60,10 @@ Everything was working and displaying perfectly fine until I made comments. My c
 	}
 	
 	function resultPercentage() { // this my function for result percentage
-		covidPercent = (covid_count/6)*100; // this is my covid percent
-		coldPercent = (cold_count/6)*100; // this is my cold percent
-		fluPercent = (flu_count/6)*100; // this is my flu percent
-		allergyPercent = (allergy_count/6)*100; // this is my allergy percent
+		covidPercent = (covid_count/11)*100; // this is my covid percent
+		coldPercent = (cold_count/11)*100; // this is my cold percent
+		fluPercent = (flu_count/11)*100; // this is my flu percent
+		allergyPercent = (allergy_count/11)*100; // this is my allergy percent
 		var resultText = document.getElementById("ShowResult");
 		resultText.innerHTML = "Probability you may have COVID-19=" + covidPercent + "%" + "<br> Probability you may have a cold=" + coldPercent + "%"; "<br> Probability you may have a flu=" + fluPercent + "%";  "<br> Probability you may have allergies=" + allergyPercent + "%"
 		
