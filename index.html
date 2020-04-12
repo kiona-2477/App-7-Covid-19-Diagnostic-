@@ -64,7 +64,7 @@ Everything was working and displaying perfectly fine until I made comments. My c
 		coldPercent = (cold_count/6)*100; // this is my cold percent
 		fluPercent = (flu_count/6)*100; // this is my flu percent
 		allergyPercent = (allergy_count/6)*100; // this is my allergy percent
-		var resultText = document.getElementById("seven");
+		var resultText = document.getElementById("ShowResult");
 		resultText.innerHTML = "Probability you may have COVID-19=" + covidPercent + "%" + "<br> Probability you may have a cold=" + coldPercent + "%"; "<br> Probability you may have a flu=" + fluPercent + "%";  "<br> Probability you may have allergies=" + allergyPercent + "%"
 		
 	}
@@ -272,7 +272,7 @@ Everything was working and displaying perfectly fine until I made comments. My c
 </div> <!--separates page-->
 	
 	
-<div class="page" id="results">			<!--this is my results page-->							
+<div class="page" id="ShowResult">			<!--this is my results page-->							
 	<div class="w3-container w3-purple">						
 		<h1>RESULTS</h1>							
 	</div>
