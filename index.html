@@ -65,7 +65,7 @@ Everything was working and displaying perfectly fine until I made comments. My c
 		fluPercent = (flu_count/11)*100; // this is my flu percent
 		allergyPercent = (allergy_count/11)*100; // this is my allergy percent
 		var resultText = document.getElementById("ShowResult");
-		resultText.innerHTML = "Probability you may have COVID-19=" + covidPercent + "," + covid_count + "%" + "<br> Probability you may have a cold=" + coldPercent + "," + cold_count + "%"+ "<br> Probability you may have a flu=" + fluPercent + "," + flu_count + "%"+  "<br> Probability you may have allergies=" + allergyPercent + "," + allergy_count + "%"
+		resultText.innerHTML = "Probability you may have COVID-19=" + covidPercent + "%" + "<br> Probability you may have a cold=" + coldPercent + "%"+ "<br> Probability you may have a flu=" + fluPercent + "%"+  "<br> Probability you may have allergies=" + allergyPercent + "%";
 		
 		
 	var chart = new CanvasJS.Chart("chartContainer", {
@@ -88,10 +88,10 @@ Everything was working and displaying perfectly fine until I made comments. My c
 		axisYType: "secondary",
 		color: "#014D65",
 		dataPoints: [
-			{ y: 3, label: "Covid-19" },
-			{ y: 7, label: "Cold" },
-			{ y: 5, label: "Flu" },
-			{ y: 9, label: "Allergy" },
+			{ y: covid_count, label: "Covid-19" },
+			{ y: cold_count, label: "Cold" },
+			{ y: flu_count, label: "Flu" },
+			{ y: allergy_count, label: "Allergy" },
 
 		]
 	}]
