@@ -72,26 +72,26 @@ Everything was working and displaying perfectly fine until I made comments. My c
 	animationEnabled: true,
 	
 	title:{
-		text:"Covid, Cold, Flu, or Allergy"
+		text:"Covid, Cold, Flu, or Allergy" // sets the title for my bar graph
 	},
 	axisX:{
 		interval: 1
 	},
 	axisY2:{
 		interlacedColor: "rgba(1,77,101,.2)",
-		gridColor: "rgba(1,77,101,.1)",
-		title: "Relative probability of each type of illness"
+		gridColor: "rgba(1,77,101,.1)", // sets the grid color for my bar graph
+		title: "Relative probability of each type of illness" // sets the title underneath the main title of my bar graph
 	},
 	data: [{
-		type: "bar",
+		type: "bar", // sets the type of graph being displayed
 		name: "illnesses",
 		axisYType: "secondary",
-		color: "#014D65",
+		color: "#014D65", // sets the color of graph being displayed
 		dataPoints: [
-			{ y: covid_count, label: "Covid-19" },
-			{ y: cold_count, label: "Cold" },
-			{ y: flu_count, label: "Flu" },
-			{ y: allergy_count, label: "Allergy" },
+			{ y: covid_count, label: "Covid-19" }, // label for y-axis
+			{ y: cold_count, label: "Cold" }, // label for y-axis 
+			{ y: flu_count, label: "Flu" }, // label for y-axis
+			{ y: allergy_count, label: "Allergy" }, // label for y-axis
 
 		]
 	}]
@@ -132,7 +132,7 @@ chart.render();
 </div>
 	
 <div id="content" class="w3-container">				<!--Where my content is located-->
-	<p>Are you feeling ill, but are not sure what your symptoms are the result of? Answer a few short questions to find out!</p>
+	<p>Are you feeling ill, but are not sure what your symptoms are the result of? Answer a few short questions to find out!</p>  <!-- creates the leading question-->
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>  		
 	
@@ -148,14 +148,14 @@ chart.render();
 	</div>
 	
     	<div id="content" class="w3-container">		<!--Where my content is located-->	
-        	<p>How long have you been having symptoms?</p>    <!--first question-->	 				
-		<a href="#two"  onclick="covidAdd();" class="w3-btn w3-pink"> 7-25b days</a> 		<!--first option-->	
-         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-pink"> less than 14 days</a>	<!--second option-->
-		<a href="#two"  onclick="fluAdd();" class="w3-btn w3-pink"> 7-14 days</a> 		<!--third option-->	
-         	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-pink"> several weeks</a>       <!--fourth option-->
+        	<p>How long have you been having symptoms?</p>    <!--creates the first question-->	 				
+		<a href="#two"  onclick="covidAdd();" class="w3-btn w3-pink"> 7-25b days</a> 		<!--creates the first response-->	
+         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-pink"> less than 14 days</a>	<!--creates the second response-->
+		<a href="#two"  onclick="fluAdd();" class="w3-btn w3-pink"> 7-14 days</a> 		<!--creates the third response-->	
+         	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-pink"> several weeks</a>       <!--creates the fourth response-->
     	</div>
 
-</div> <!--separates page-->
+</div> <!--page divider; separates the page-->
 
 <div class="page" id="two">				<!--this is my second page-->								
 	<div class="w3-container w3-purple">						
@@ -163,13 +163,13 @@ chart.render();
 	</div>
 	
 	<div id="content" class="w3-container">		<!--Where my content is located-->	
-		<p>Do you have have a cough, and if so, what kind?</p>	<!--second question-->	 						
-		<a href="#three"  onclick="covidAdd(); fluAdd();" class="w3-btn w3-pink"> Yes, dry cough</a>  <!--first option-->
-         	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-pink"> Yes, mild cough</a> 	       <!--second option-->	
-         	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-pink"> Rarely, dry cough unless it triggers asthma</a>      <!--third option-->
+		<p>Do you have have a cough, and if so, what kind?</p>	<!--creates the second question-->	 						
+		<a href="#three"  onclick="covidAdd(); fluAdd();" class="w3-btn w3-pink"> Yes, dry cough</a> 	<!--creates the first response-->
+         	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-pink"> Yes, mild cough</a> 	       <!--creates the second response-->	
+         	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-pink"> Rarely, dry cough unless it triggers asthma</a>      <!--creates the third response-->
 	</div>
 
-</div>	<!--separates page-->
+</div>	<!--page divider; separates the page-->
 
 
 <div class="page" id="three">				<!--this is my third page-->							
@@ -178,12 +178,12 @@ chart.render();
 	</div>
 	
 	<div id="content" class="w3-container">		<!--Where my content is located-->
-		<p>Are you experiencing shortness of breath?</p>	<!--third question-->			
-		<a href="#four"  onclick="covidAdd();" class="w3-btn w3-pink"> Sometimes </a>	<!--first option-->
-         	<a href="#four"  onclick="coldAdd(); fluAdd(); allergyAdd();" class="w3-btn w3-pink">No</a> <!--second option-->
+		<p>Are you experiencing shortness of breath?</p>	<!--creates the third question-->			
+		<a href="#four"  onclick="covidAdd();" class="w3-btn w3-pink"> Sometimes </a>	<!--creates the first response-->
+         	<a href="#four"  onclick="coldAdd(); fluAdd(); allergyAdd();" class="w3-btn w3-pink">No</a> <!--creates the second response-->
 	</div>
 
-</div>	<!--separates page-->
+</div>	<!--page divider; separates the page-->
 
 	
 <div class="page" id="four">				<!--this is my fourth page-->					
@@ -192,12 +192,12 @@ chart.render();
 	</div>		
 	
 	<div id="content" class="w3-container">		<!--Where my content is located-->
-		<p>Are you experiencing any sneezing? </p>	<!--fourth question-->				
-		<a href="#five" onclick="covidAdd(); fluAdd();" class="w3-btn w3-pink"> No </a> <!--first option-->
-         	<a href="#five" onclick="coldAdd(); allergyAdd()" class="w3-btn w3-pink"> Yes </a> <!--second option-->
+		<p>Are you experiencing any sneezing? </p>	<!--creates the fourth question-->				
+		<a href="#five" onclick="covidAdd(); fluAdd();" class="w3-btn w3-pink"> No </a> <!--creates the first response-->
+         	<a href="#five" onclick="coldAdd(); allergyAdd()" class="w3-btn w3-pink"> Yes </a> <!--creates the second response-->
 	</div>
 
-</div> <!--separates page-->
+</div> <!--page divider; separates the page-->
 	
 
 <div class="page" id="five">			<!--this is my fifth page-->					
@@ -206,13 +206,13 @@ chart.render();
 	</div>
 	
 	<div id="content" class="w3-container"> <!--Where my content is located-->
-		<p>Do you have a runny or stuffy nose?</p> <!--fifth question-->					
-		<a href="#six"  onclick="covidAdd();" class="w3-btn w3-pink"> Rarely </a> <!--first option-->	
-         	<a href="#six"  onclick="coldAdd(); allergyAdd();" class="w3-btn w3-pink"> Yes </a> <!--second option-->
-		<a href="#six" 	onclick="fluAdd();" class="w3-btn w3-pink"> Sometimes </a> <!--third option-->
+		<p>Do you have a runny or stuffy nose?</p> <!--creates the fifth question-->					
+		<a href="#six"  onclick="covidAdd();" class="w3-btn w3-pink"> Rarely </a> <!-- creates the first response-->	
+         	<a href="#six"  onclick="coldAdd(); allergyAdd();" class="w3-btn w3-pink"> Yes </a> <!--creates the second response-->
+		<a href="#six" 	onclick="fluAdd();" class="w3-btn w3-pink"> Sometimes </a> <!--creates the third response-->
 	</div> 
 		
-</div>	<!--separates page-->
+</div>	<!--page divider; separates the page-->
 
 
 
@@ -222,13 +222,13 @@ chart.render();
 	</div>
 	
 	<div id="content" class="w3-container"> <!--Where my content is located-->
-		<p>Do you experience a sore throat?</p> <!--sixth question-->						
-		<a href="#seven" onclick="covidAdd(); fluAdd();" class="w3-btn w3-pink">Sometimes</a>	<!--first option-->
-         	<a href="#seven" onclick="coldAdd();" class="w3-btn w3-pink">Yes</a> <!--second option-->
-		<a href="#seven" onclick="allergyAdd();" class="w3-btn w3-pink">Sometimes, usually mild</a> <!--second option-->
+		<p>Do you experience a sore throat?</p> <!--creates the sixth question-->						
+		<a href="#seven" onclick="covidAdd(); fluAdd();" class="w3-btn w3-pink">Sometimes</a>	<!--creates the first response-->
+         	<a href="#seven" onclick="coldAdd();" class="w3-btn w3-pink">Yes</a> <!--creates the second response-->
+		<a href="#seven" onclick="allergyAdd();" class="w3-btn w3-pink">Sometimes, usually mild</a> <!--creates the third response-->
 	</div>
 	
-</div> <!--separates page-->
+</div> <!--page divider; separates the page-->
 	
 	
 
@@ -238,13 +238,13 @@ chart.render();
 	</div>
 	
 	<div id="content" class="w3-container"> <!--Where my content is located-->
-		<p>Do you have a fever?</p> <!--seventh question-->					
-		<a href="#eight"  onclick="covidAdd(); fluAdd(); " class="w3-btn w3-pink"> Yes</a> <!--first option-->	
-         	<a href="#eight"  onclick="coldAdd();" class="w3-btn w3-pink">Yes, but for a short period of time</a> <!--second option-->
-		<a href="#eight"  onclick="allergyAdd();" class="w3-btn w3-pink"> No</a> <!--third option-->	
+		<p>Do you have a fever?</p> <!--creates the seventh question-->					
+		<a href="#eight"  onclick="covidAdd(); fluAdd(); " class="w3-btn w3-pink"> Yes</a> <!--creates the first response-->	
+         	<a href="#eight"  onclick="coldAdd();" class="w3-btn w3-pink">Yes, but for a short period of time</a> <!--creates the second response-->
+		<a href="#eight"  onclick="allergyAdd();" class="w3-btn w3-pink"> No</a> <!--creates the third response-->	
 	</div>
 	
-</div> <!--separates page-->
+</div> <!--page divider; separates the page-->
 
 	
 <div class="page" id="eight">			<!--this is my eignth page-->					
@@ -253,12 +253,12 @@ chart.render();
 	</div>
 	
 	<div id="content" class="w3-container"> <!--Where my content is located-->
-		<p>Are you feeling tired or weak?</p> <!--fifth question-->					
-		<a href="#nine"  onclick="covidAdd(); coldAdd(); allergyAdd();" class="w3-btn w3-pink"> Sometimes</a> <!--first option-->	
-         	<a href="#nine"  onclick="fluAdd();" class="w3-btn w3-pink"> Yes</a> <!--second option-->
+		<p>Are you feeling tired or weak?</p> <!--creates the eignth question-->					
+		<a href="#nine"  onclick="covidAdd(); coldAdd(); allergyAdd();" class="w3-btn w3-pink"> Sometimes</a> <!--creates the first response-->	
+         	<a href="#nine"  onclick="fluAdd();" class="w3-btn w3-pink"> Yes</a> <!--creates the second response-->
 	</div>
 
-</div> <!--separates page-->
+</div> <!--page divider; separates the page-->
 	
 <div class="page" id="nine">			<!--this is my ninth page-->					
 	<div class="w3-container w3-purple">						
@@ -266,13 +266,13 @@ chart.render();
 	</div>
 	
 	<div id="content" class="w3-container"> <!--Where my content is located-->
-		<p>Do you experience any headaches?</p> <!--ninth question-->					
-		<a href="#ten"  onclick="covidAdd(); allergyAdd();" class="w3-btn w3-pink"> Sometimes</a> <!--first option-->	
-         	<a href="#ten"  onclick="fluAdd();" class="w3-btn w3-pink"> Yes</a> <!--second option-->
-		<a href="#ten"  onclick="coldAdd();" class="w3-btn w3-pink"> Rarely</a> <!--third option-->
+		<p>Do you experience any headaches?</p> <!--creates the ninth question-->					
+		<a href="#ten"  onclick="covidAdd(); allergyAdd();" class="w3-btn w3-pink"> Sometimes</a> <!--creates the first response-->	
+         	<a href="#ten"  onclick="fluAdd();" class="w3-btn w3-pink"> Yes</a> <!--creates the second response-->
+		<a href="#ten"  onclick="coldAdd();" class="w3-btn w3-pink"> Rarely</a> <!--creates the third response ->
 	</div>
 
-</div> <!--separates page-->
+</div> <!--page divider; separates the page-->
 	
 <div class="page" id="ten">			<!--this is my tenth page-->					
 	<div class="w3-container w3-purple">						
@@ -280,27 +280,27 @@ chart.render();
 	</div>
 	
 	<div id="content" class="w3-container"> <!--Where my content is located-->
-		<p>Do you experience body aches or pains?</p> <!--tenth question-->					
-		<a href="#eleven"  onclick="covidAdd();" class="w3-btn w3-pink"> Sometimes</a> <!--first option-->	
-         	<a href="#eleven"  onclick="coldAdd(); fluAdd();" class="w3-btn w3-pink">Yes</a> <!--second option-->
-		<a href="#eleven"  onclick="allergyAdd();" class="w3-btn w3-pink">No</a> <!--third option-->
+		<p>Do you experience body aches or pains?</p> <!--creates the tenth question-->					
+		<a href="#eleven"  onclick="covidAdd();" class="w3-btn w3-pink"> Sometimes</a> <!--creates the first response-->	
+         	<a href="#eleven"  onclick="coldAdd(); fluAdd();" class="w3-btn w3-pink">Yes</a> <!--creates the second response-->
+		<a href="#eleven"  onclick="allergyAdd();" class="w3-btn w3-pink">No</a> <!--creates the third response-->
 	</div>
 
-</div> <!--separates page-->
+</div> <!--page divider; separates the page-->
 	
-<div class="page" id="eleven">			<!--this is my tenth page-->					
+<div class="page" id="eleven">			<!--this is my eleventh page-->					
 	<div class="w3-container w3-purple">						
 		<h1>Question 11</h1>							
 	</div>
 	
 	<div id="content" class="w3-container"> <!--Where my content is located-->
-		<p>Do you experiencer diarrhea?</p> <!--eleventh question-->				
-		<a href="#ResultDisplay"  onclick="covidAdd();" class="w3-btn w3-pink"> Sometimes</a> <!--first option-->	
-         	<a href="#ResultDisplay"  onclick="fluAdd();" class="w3-btn w3-pink">Sometimes for children</a> <!--second option-->
-		<a href="#ResultDisplay"  onclick="coldAdd(); allergyAdd();" class="w3-btn w3-pink"> No</a> <!--third option-->
+		<p>Do you experiencer diarrhea?</p> <!--creates the eleventh question-->				
+		<a href="#ResultDisplay"  onclick="covidAdd();" class="w3-btn w3-pink"> Sometimes</a> <!--creates the first response-->	
+         	<a href="#ResultDisplay"  onclick="fluAdd();" class="w3-btn w3-pink">Sometimes for children</a> <!--creates the second response-->
+		<a href="#ResultDisplay"  onclick="coldAdd(); allergyAdd();" class="w3-btn w3-pink"> No</a> <!--creates the third response-->
 	</div>
 	
-</div> <!--separates page-->
+</div> <!--page divider; separates the page-->
 	
 	
 <div class="page" id="ResultDisplay">			<!--this is my results page-->							
@@ -309,10 +309,10 @@ chart.render();
 	</div>
 	
 	<div id="content" class="w3-container">	<!--where my content is located-->				
-		<p>Here are your results!</p>	<!--displays results-->						
+		<p>Here are your results!</p>	<!--displays the results-->						
 		<a onclick="resultPercentage();" class="w3-btn w3-pink">Click here!</a>
 		<p id="ShowResult"></p>
-		<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+		<div id="chartContainer" style="height: 300px; width: 100%;"></div> <!--sets the measurement of my chart-->
 	</div>
 
 </div>
