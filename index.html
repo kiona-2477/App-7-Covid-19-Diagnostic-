@@ -17,10 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-The goal of my code is to create my own diagnostic survey about diabetes and stroke and to find out which one the individual has.
+The goal of my code is to be able to diagnose a patient between having a cold, flu, allergies, or COVID-19 and to provide a graphic display that shows the results.
  
 Known Issues:
-Everything was working and displaying perfectly fine until I made comments. My calculations didn't add up to 100% and the picture didn't upload.
+I initially had trouble with getting my graph to display on the right page and my results page wouldn't show all four probabilites, but I was able to get it to work.
 -->
 
 	
@@ -35,10 +35,10 @@ Everything was working and displaying perfectly fine until I made comments. My c
 
 <script>
         var covid_count = 0; // the total covid count is set to 0
-        var cold_count = 0; // total cold count is set to 0
-	var flu_count = 0;  // total flu count is set to 0
-	var allergy_count = 0; // total allergy count is set to 0
-	// these are the four variables that are similar to App 4. e
+        var cold_count = 0; // the total cold count is set to 0
+	var flu_count = 0;  // the total flu count is set to 0
+	var allergy_count = 0; // the total allergy count is set to 0
+	// these are the four variables that are similar to App 4
 	
         function covidAdd(){ // this is a function that will add up the responses in the covid category
             covid_count = covid_count + 1; // this is my covid count
@@ -92,6 +92,8 @@ Everything was working and displaying perfectly fine until I made comments. My c
 			{ y: cold_count, label: "Cold" }, // label for y-axis 
 			{ y: flu_count, label: "Flu" }, // label for y-axis
 			{ y: allergy_count, label: "Allergy" }, // label for y-axis
+			
+	// The bar graph is a visual representation of the proportional results of the probabilities displayed for covid-19, cold, flu, and allergy. It provides a convenient and visually-appealing way for patients to see their results to easily tell which illness is most severe.
 
 		]
 	}]
